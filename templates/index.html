@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <head>
+    <title>World Fact Book</title>
+    <link rel='stylesheet' href='/static/world.css'>
+  </head>
+  <body>
+    <h1>World Fact Book</h1>
+    <ul>
+    {% for c in continentList %}
+    <li><a href=/continent/{{c}}>{{ c }}</a></li>
+    {% endfor %}
+    </ul>
+  </body>
+</html>
