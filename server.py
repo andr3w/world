@@ -7,8 +7,21 @@ app = Flask(__name__)
 def countryPage(num):
   return render_template('country.html',c = w[int(num)])
 
+@app.route('/countryByName/<name>')
+def countryByNamePage(name):
+  return render_template('country.html',
+          c = next(c for c in w if c['name'] == name)
+          )
+
+@app.route('/continent/<name>')
+def continentPage(name):
+  return render_template('continent.html',
+          continentName = name,
+          countryList = [c for c in w if c['continent']==name]
+          )
+
 @app.route('/')
-def indexPage(num):
+def indexPage():
   return render_template('index.html',continentList = set([c['continent'] for c in w]))
 
 if __name__=='__main__':
