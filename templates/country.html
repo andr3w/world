@@ -16,7 +16,7 @@
    </div>
    <div class=line>
      <div>Area (km<sup>2</sup>):</div>
-     <div class='num'>{{"{:,d}".format(c['area'])}}</div>
+     <div class='num'>{{"{:,d}".format(c['area']) if c['area'] != None }}</div>
    </div>
    <div class=line>
      <div>Population:</div>
