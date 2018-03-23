@@ -1,3 +1,7 @@
+#For this to be deployed you must
+#Use the file name server.py
+#Use the variable name app
+#This is because server:app has been hard coded in /etc/uwsgi-emperor/vassals/40000036.ini
 from flask import Flask
 app = Flask(__name__)
 
